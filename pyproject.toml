@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fastboot-mcp"
+version = "0.1.0"
+description = "MCP server wrapping the Android fastboot bootloader protocol (via the fastboot CLI)"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "GPL-3.0-or-later" }
+dependencies = [
+    "mcp",
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[tool.setuptools]
+py-modules = ["fastboot_mcp_server"]
